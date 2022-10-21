@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://chest_common_empty.gltf.glb" type="PackedScene" id=1]
+
+[node name="chest_common_emptygltf" instance=ExtResource( 1 )]

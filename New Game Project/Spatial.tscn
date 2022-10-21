@@ -1,0 +1,138 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Spatial.gd" type="Script" id=1]
+[ext_resource path="res://player.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[sub_resource type="SphereShape" id=3]
+radius = 1.49
+
+[sub_resource type="ArrayMesh" id=4]
+surfaces/0 = {
+"aabb": AABB( -1.02887, -1.02887, -1.02887, 2.05773, 2.05774, 2.05774 ),
+"array_data": PoolByteArray( 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 63, 0, 0, 127, 64, 0, 0, 0, 0, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 191, 127, 127, 129, 64, 85, 57, 0, 0, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 63, 0, 0, 127, 64, 85, 53, 0, 0, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 191, 127, 127, 129, 64, 0, 60, 0, 0, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 63, 0, 0, 127, 64, 0, 0, 0, 56, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 191, 127, 127, 129, 64, 85, 57, 0, 56, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 63, 0, 0, 127, 64, 85, 53, 0, 56, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 191, 127, 127, 129, 64, 0, 60, 0, 56, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 63, 127, 0, 127, 127, 85, 53, 0, 0, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 191, 129, 0, 0, 63, 0, 0, 0, 56, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 191, 127, 0, 127, 127, 85, 57, 0, 0, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 63, 129, 0, 0, 63, 85, 53, 0, 56, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 63, 127, 0, 127, 127, 85, 53, 0, 56, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 191, 129, 0, 0, 63, 0, 0, 0, 60, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 191, 127, 0, 127, 127, 85, 57, 0, 56, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 63, 129, 0, 0, 63, 85, 53, 0, 60, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 63, 0, 127, 129, 64, 85, 53, 0, 56, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 63, 0, 129, 127, 64, 85, 57, 0, 56, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 63, 0, 127, 129, 64, 85, 57, 0, 56, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 63, 0, 129, 127, 64, 0, 60, 0, 56, 238, 177, 131, 63, 238, 177, 131, 63, 238, 177, 131, 191, 0, 127, 129, 64, 85, 53, 0, 60, 238, 177, 131, 191, 238, 177, 131, 191, 238, 177, 131, 191, 0, 129, 127, 64, 85, 57, 0, 60, 238, 177, 131, 191, 238, 177, 131, 63, 238, 177, 131, 191, 0, 127, 129, 64, 85, 57, 0, 60, 238, 177, 131, 63, 238, 177, 131, 191, 238, 177, 131, 191, 0, 129, 127, 64, 0, 60, 0, 60 ),
+"array_index_data": PoolByteArray( 0, 0, 4, 0, 2, 0, 2, 0, 4, 0, 6, 0, 1, 0, 5, 0, 3, 0, 3, 0, 5, 0, 7, 0, 8, 0, 12, 0, 10, 0, 10, 0, 12, 0, 14, 0, 9, 0, 13, 0, 11, 0, 11, 0, 13, 0, 15, 0, 16, 0, 20, 0, 18, 0, 18, 0, 20, 0, 22, 0, 17, 0, 21, 0, 19, 0, 19, 0, 21, 0, 23, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 36,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.901961, 0.0235294, 0.184314, 1 )
+
+[sub_resource type="CapsuleMesh" id=6]
+
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("arm:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 2.09436e-05, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arm:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 1.86822, -0.100373, -1.37786 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "attack"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("arm:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 2.09436e-05, 0, 0 ), Vector3( -61.702, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arm:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.86822, -0.100373, -1.37786 ), Vector3( 1.86822, -0.100373, -0.074337 ), Vector3( 1.868, -0.1, -1.3 ) ]
+}
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 1 )
+highlight = NodePath("enemy/highligt")
+
+[node name="enemy" type="MeshInstance" parent="."]
+transform = Transform( 0.562547, 0, 0, 0, 0.76572, 0, 0, 0, 0.450037, 0, 0, 0 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="enemy"]
+
+[node name="CollisionShape" type="CollisionShape" parent="enemy/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="Area" type="Area" parent="enemy"]
+
+[node name="CollisionShape" type="CollisionShape" parent="enemy/Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.150838, 0 )
+shape = SubResource( 3 )
+
+[node name="highligt" type="MeshInstance" parent="enemy"]
+visible = false
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.772168, -0.267755, 0.576249, 0, 0.906882, 0.421384, -0.635418, -0.325379, 0.700266, 6.25601, 3.96033, 13.9992 )
+
+[node name="aim" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37784, 1.15248, 9.60882 )
+
+[node name="player" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 9.81388 )
+mesh = SubResource( 6 )
+script = ExtResource( 2 )
+
+[node name="arm" type="MeshInstance" parent="player"]
+transform = Transform( 0.229277, 0, 0, 0, 0.224247, -7.6744e-07, 0, 8.197e-08, 2.0995, 1.86822, -0.100373, -1.37786 )
+mesh = SubResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+autoplay = "attack"
+anims/RESET = SubResource( 8 )
+anims/attack = SubResource( 9 )
+
+[node name="Timer" type="Timer" parent="player"]
+autostart = true
+
+[connection signal="mouse_entered" from="enemy/Area" to="." method="_on_Area_mouse_entered"]
+[connection signal="mouse_exited" from="enemy/Area" to="." method="_on_Area_mouse_exited"]
+[connection signal="timeout" from="player/Timer" to="player" method="_on_Timer_timeout"]
